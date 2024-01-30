@@ -16,3 +16,5 @@ FROM debian:12
 RUN apt-get update && apt-get install -y openssl && rm -rf /var/lib/apt/lists/*
 
 COPY --from=build /usr/local /usr/local
+
+CMD [ "h2o" ]
